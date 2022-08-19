@@ -1,0 +1,190 @@
+.side-container {
+  width: 0%;
+  height: 100%;
+  background: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.side-container:before, .side-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
+.side-container:before {
+  background: #f7ca18;
+}
+
+.side-container:after {
+  background: tomato;
+}
+
+.side-container .item {
+  margin: 20px;
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.side-container.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: width 0.3s ease-in-out forwards 1;
+          animation: width 0.3s ease-in-out forwards 1;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.side-container.open .item {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-animation: fade-in 0.3s ease-in-out forwards;
+          animation: fade-in 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.side-container.open:before {
+  -webkit-animation: width 0.3s ease-in-out forwards;
+          animation: width 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.side-container.open:after {
+  -webkit-animation: width 0.3s ease-in-out forwards;
+          animation: width 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.side-container.close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-animation: width-close 0.3s ease-in-out forwards;
+          animation: width-close 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.side-container.close .item {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: fade-out 0.3s ease-in-out forwards;
+          animation: fade-out 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.side-container.close:before {
+  width: 100%;
+  -webkit-animation: width-close 0.3s ease-in-out forwards;
+          animation: width-close 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.side-container.close:after {
+  width: 100%;
+  -webkit-animation: width-close 0.3s ease-in-out forwards;
+          animation: width-close 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes width {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes width {
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes width-close {
+  from {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+  }
+  to {
+    width: 0%;
+    display: none;
+  }
+}
+
+@keyframes width-close {
+  from {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  to {
+    width: 0%;
+    display: none;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=menu.css.map */
