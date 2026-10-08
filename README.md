@@ -2,7 +2,7 @@
 
 石藝創作者「蔡明哲」品牌形象網站的 2022 完整版切版，為早期作品。
 
-新版請見 [yoyi](https://github.com/cactus1998/yoyi)（Demo：https://kentfolio.dev/yoyi/）。
+新版請見 [yoyi](https://github.com/cactus1998/yoyi)
 
 ## 內容
 
